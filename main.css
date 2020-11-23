@@ -3,7 +3,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: 480px 480px 480px 5px 475px;
-    grid-template-rows: 40px 5px 297px 5px 245px 5px 245px 5px 45px 5px 40px;     
+    grid-template-rows: 40px 5px 292px 5px 245px 5px 245px 5px 45px 5px 40px;     
 }
 header {
     width: 100%;
@@ -40,8 +40,7 @@ header > .soc {
     text-align: center;
     padding-top: 5px;
     grid-column: 10 / 12;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row: 2 / 3;
     background-color: white;
 }
 
@@ -54,6 +53,8 @@ header > .soc {
     padding-top: 153px;
     padding-bottom: 153px;
     grid-row: 3 / 4;
+    padding: 0;
+    padding-top: 100px;
 }
 .testimonials {
     display: grid;
@@ -159,53 +160,54 @@ footer {
 
 @media (max-width: 990px) {
     .container {
-        margin: 0;
-        grid-template-columns: 330px 330px 330px;
-        grid-template-rows: 40px 5px 297px 5px 245px 5px 245px 5px 45px 5px 40px;     
+        grid-template-columns: 318px 318px 318px;
+        grid-template-rows: 40px 5px 270px 5px 245px 5px 245px 5px 45px 5px 40px;     
     }
-    nav, .ads, .services > .center-column{
+    nav, div > .ads, .services > .center-column{
         visibility: hidden;
     }
+
+    header {
+        grid-template-columns: 1fr 98px 98px 98px 98px 98px 98px 98px 98px 98px 1fr;
+        grid-column: 1 / 6;  
+    }
+    header > img {
+        width: 30px;
+        grid-column: 2 / 3;
+    }    
+    header > .soc {
+        grid-column: 9 / 11;
+        
+    }
+    .hero {       
+        grid-column:  1 / 6;
+        grid-row: 3 / 4;
+
+     }
     .services {
+        grid-template-columns: 1fr 480px 5px 480px 1fr;
         grid-row: 5 / 6;
+        grid-column: 1 / 6;
     }
     .services > .right-column {
         grid-column: 4 / 5;
     }
     .testimonials {
         grid-row: 7 / 8;
-        width: 100%;
-        grid-template-columns: 5px 487px 5px 487px 5px;
-
+        grid-column: 1 / 6;
+        grid-template-columns: 1fr 480px 5px 480px 1fr;
     }
-    header {
-        grid-template-columns: 1fr 88px 88px 88px 88px 88px 88px 88px 88px 88px 88px 1fr;
-        grid-template-rows: 5px 30px 5px;
-        grid-column: 1 / 6;  
-    
-    }
-    header > img {
-        
-        width: 30px;
+    .testimonials > .left {
         grid-column: 2 / 3;
-        
-        margin-right: 94px;
-       
     }
-    header > nav {
-       
-        grid-column: 5 / 8;
-        grid-column: 10 / 12;
-        
+    .testimonials > .right {
+        grid-column: 4 / 5;
     }
-    
-    .hero {
-       
-        grid-column:  1 / 6;
-        background-color: aliceblue;
-        text-align: center;
-        padding-top: 153px;
-        padding-bottom: 153px;
-        grid-row: 3 / 4;
+    .freelance {
+        grid-column: 1 / 6;
+    }
+    footer {
+        grid-column: 1 / 5;
+        grid-column: 1 / 6;
     }
 }
